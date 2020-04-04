@@ -34,7 +34,7 @@ import com.bumptech.glide.request.RequestOptions;
 import java.util.Locale;
 import java.util.Random;
 
-public class Constant {
+public class ConstantMethods {
     public static void ShowToastShort(Context mContext, String mtext) {
         Toast.makeText(mContext, mtext,
                 Toast.LENGTH_SHORT).show();
