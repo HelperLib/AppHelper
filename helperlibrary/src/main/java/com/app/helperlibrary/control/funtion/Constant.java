@@ -34,7 +34,7 @@ import com.bumptech.glide.request.RequestOptions;
 import java.util.Locale;
 import java.util.Random;
 
-public class ConstApp {
+public class Constant {
     public static void ShowToastShort(Context mContext, String mtext) {
         Toast.makeText(mContext, mtext,
                 Toast.LENGTH_SHORT).show();
@@ -212,7 +212,7 @@ public class ConstApp {
 
 
     }
-    public static void setImage(Context context, ImageView imageView,String url) {
+    public static void setImageInt(Context context, ImageView imageView,int url) {
         RequestOptions options = new RequestOptions()
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                 .placeholder(setPlaceholder())
@@ -224,6 +224,17 @@ public class ConstApp {
                 .into(imageView);
     }
 
+    public static void setImageString(Context context, ImageView imageView,String url) {
+        RequestOptions options = new RequestOptions()
+                .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+                .placeholder(setPlaceholder())
+                .priority(Priority.HIGH);
+        Glide.with(context)
+                .load(url)
+                .apply(options)
+                .error(setPlaceholder())
+                .into(imageView);
+    }
 
 
     public static void startBlinkingAnimation(Context context, ImageView imageView) {
