@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearToolbar"
         android:layout_margin="5dp"
-        layout="@layout/layout_ads_control"/>
+        layout="@layout/layout_native_ad"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
