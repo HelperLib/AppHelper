@@ -35,6 +35,7 @@ public class AdmobHelp {
     AdView adView;
     private UnifiedNativeAd nativeAd;
     public static long timeLoad=0;
+    public static long selftime=50*1000;
 
     public static AdmobHelp getInstance() {
         if (instance == null) {
@@ -99,9 +100,9 @@ public class AdmobHelp {
         }
     }
 
-    public void showInterstitialAd(long TimeReload,Boolean isTime,AdCloseListener adCloseListener) {
-        if(isTime){
-            if((timeLoad+TimeReload)<System.currentTimeMillis()){
+    public void showInterstitialAd(long TimeReload,Boolean isTimeBased,AdCloseListener adCloseListener,boolean isDefaultTime) {
+        if(isDefaultTime){
+            if((timeLoad+selftime)<System.currentTimeMillis()){
                 if (canShowInterstitialAd()) {
                     this.adCloseListener = adCloseListener;
                     mPublisherInterstitialAd.show();
@@ -114,14 +115,30 @@ public class AdmobHelp {
                 adCloseListener.onAdClosed();
             }
         }else {
-            if (canShowInterstitialAd()) {
-                this.adCloseListener = adCloseListener;
-                mPublisherInterstitialAd.show();
-            } else {
+            if(isTimeBased){
+                if((timeLoad+TimeReload)<System.currentTimeMillis()){
+                    if (canShowInterstitialAd()) {
+                        this.adCloseListener = adCloseListener;
+                        mPublisherInterstitialAd.show();
+                        timeLoad = System.currentTimeMillis();
+                    } else {
 
-                adCloseListener.onAdClosed();
+                        adCloseListener.onAdClosed();
+                    }
+                }else{
+                    adCloseListener.onAdClosed();
+                }
+            }else {
+                if (canShowInterstitialAd()) {
+                    this.adCloseListener = adCloseListener;
+                    mPublisherInterstitialAd.show();
+                } else {
+
+                    adCloseListener.onAdClosed();
+                }
             }
         }
+
 
 
     }

@@ -100,12 +100,7 @@ public class ConstantMethods {
         }
     }
 
-    public static long diffSec(){
-        Date datecount=new Date();
-        Date currentDate = new Date();
-        long diffInMs = currentDate.getTime() - datecount.getTime();
-        return TimeUnit.MILLISECONDS.toSeconds(diffInMs);
-    }
+
     public static boolean isEmpty(CharSequence str) {
         return str == null || str.length() == 0;
     }
