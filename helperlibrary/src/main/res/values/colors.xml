@@ -10,7 +10,12 @@
     <color name="color_gray_2_ads">#fff8f8f8</color>
     <color name="stocke_card">#58595A</color>
     <color name="gnt_test_background_color">#00F4F4F4</color>
-
+    <color name="ios_blue">#FF037BFF</color>
+    <color name="ios_red">#FFFD4A2E</color>
+    <color name="ios_grey">#FFC6C6C6</color>
+    <color name="ios_bg">#FFE9E9E9</color>
+    <color name="ios_btn_normal">#FFE9E9E9</color>
+    <color name="ios_btn_press">#FFCDCDCD</color>
     <color name="gnt_test_background_color_2">#00A3A3A3</color>
     <color name="colorBlack">#111111</color>
     <color name="gnt_black">#000000</color>
