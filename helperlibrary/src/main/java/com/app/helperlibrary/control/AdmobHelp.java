@@ -35,6 +35,7 @@ public class AdmobHelp {
     AdView adView;
     private UnifiedNativeAd nativeAd;
     public static long timeLoad=0;
+    public static long TimeReload=50*1000;
 
     public static AdmobHelp getInstance() {
         if (instance == null) {
@@ -99,7 +100,7 @@ public class AdmobHelp {
         }
     }
 
-    public void showInterstitialAd(long TimeReload,Boolean isTime,AdCloseListener adCloseListener) {
+    public void showInterstitialAd(Boolean isTime,AdCloseListener adCloseListener) {
         if(isTime){
             if((timeLoad+TimeReload)<System.currentTimeMillis()){
                 if (canShowInterstitialAd()) {
