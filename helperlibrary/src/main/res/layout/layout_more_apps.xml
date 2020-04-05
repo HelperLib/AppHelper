@@ -43,7 +43,7 @@
                 android:textColor="@color/gnt_black"
                 android:textSize="15sp" />
 
-            <com.app.helperlibrary.control.funtion.CustomTextView
+            <com.app.helperlibrary.control.shimmer.ShimmerTextView
                 android:id="@+id/txtLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
