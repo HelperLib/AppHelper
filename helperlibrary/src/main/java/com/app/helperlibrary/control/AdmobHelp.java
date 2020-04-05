@@ -22,7 +22,6 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.VideoOptions;
-import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.formats.MediaView;
 import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
@@ -287,7 +286,7 @@ public class AdmobHelp {
                 .withNativeAdOptions(adOptions)
                 .build();
 
-        adLoader.loadAd(new PublisherAdRequest.Builder().build());
+        adLoader.loadAd(new AdRequest.Builder().build());
     }
     public void loadNativeFragment(final AppCompatActivity mActivity, final View rootView, String AdmobNativeId, final AdCloseListener adCloseListener){
         final ShimmerFrameLayout containerShimmer =
@@ -340,7 +339,7 @@ public class AdmobHelp {
                 .withNativeAdOptions(adOptions)
                 .build();
 
-        adLoader.loadAd(new PublisherAdRequest.Builder().build());
+        adLoader.loadAd(new AdRequest.Builder().build());
     }
     private void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd, UnifiedNativeAdView adView) {
 

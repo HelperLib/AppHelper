@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.app.helperlibrary.control.AdmobHelp;
 import com.app.helperlibrary.control.Prefs;
 
 public class MainActivity extends AppCompatActivity {

@@ -1,2 +1,2 @@
-include ':app', ':helperlibrary'
+include ':helperlibrary'
 rootProject.name='Helper'

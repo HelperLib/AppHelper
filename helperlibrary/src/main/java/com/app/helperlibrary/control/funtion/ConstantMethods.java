@@ -14,7 +14,6 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
-import android.renderscript.RenderScript;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
@@ -35,6 +34,8 @@ import java.util.Locale;
 import java.util.Random;
 
 public class ConstantMethods {
+
+
     public static void ShowToastShort(Context mContext, String mtext) {
         Toast.makeText(mContext, mtext,
                 Toast.LENGTH_SHORT).show();
@@ -157,13 +158,6 @@ public class ConstantMethods {
         }
     }
 
-    public static void isNet(Context context) {
-        if (isConnectionAvailable(context)) {
-
-        } else {
-
-        }
-    }
 
     public static void setCardBackground(final Context mContext, int color, final CardView imageView) {
         if (mContext != null && imageView != null) {
@@ -212,7 +206,8 @@ public class ConstantMethods {
 
 
     }
-    public static void setImageInt(Context context, ImageView imageView,int url) {
+
+    public static void setImageInt(Context context, ImageView imageView, int url) {
         RequestOptions options = new RequestOptions()
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                 .placeholder(setPlaceholder())
@@ -224,7 +219,7 @@ public class ConstantMethods {
                 .into(imageView);
     }
 
-    public static void setImageString(Context context, ImageView imageView,String url) {
+    public static void setImageString(Context context, ImageView imageView, String url) {
         RequestOptions options = new RequestOptions()
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                 .placeholder(setPlaceholder())
@@ -235,6 +230,8 @@ public class ConstantMethods {
                 .error(setPlaceholder())
                 .into(imageView);
     }
+
+
 
 
     public static void startBlinkingAnimation(Context context, ImageView imageView) {
