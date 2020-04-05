@@ -30,8 +30,10 @@ import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
+import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class ConstantMethods {
 
@@ -98,6 +100,12 @@ public class ConstantMethods {
         }
     }
 
+    public static long diffSec(){
+        Date datecount=new Date();
+        Date currentDate = new Date();
+        long diffInMs = currentDate.getTime() - datecount.getTime();
+        return TimeUnit.MILLISECONDS.toSeconds(diffInMs);
+    }
     public static boolean isEmpty(CharSequence str) {
         return str == null || str.length() == 0;
     }
