@@ -35,7 +35,7 @@ public class AdmobHelp {
     AdView adView;
     private UnifiedNativeAd nativeAd;
     public static long timeLoad=0;
-    public static long selftime=50*1000;
+    public static long selftime=30*1000;
 
     public static AdmobHelp getInstance() {
         if (instance == null) {
