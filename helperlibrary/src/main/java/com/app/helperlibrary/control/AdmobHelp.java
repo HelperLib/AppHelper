@@ -100,7 +100,7 @@ public class AdmobHelp {
         }
     }
 
-    public void showInterstitialAd(long TimeReload,Boolean isTimeBased,AdCloseListener adCloseListener,boolean isDefaultTime) {
+    public void showInterstitialAd(long TimeReload,Boolean isTimeBased,boolean isDefaultTime,AdCloseListener adCloseListener) {
         if(isDefaultTime){
             if((timeLoad+selftime)<System.currentTimeMillis()){
                 if (canShowInterstitialAd()) {
