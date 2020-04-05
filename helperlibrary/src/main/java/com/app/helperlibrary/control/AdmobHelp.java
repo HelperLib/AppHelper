@@ -22,6 +22,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.VideoOptions;
+import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.formats.MediaView;
 import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
@@ -35,7 +36,6 @@ public class AdmobHelp {
     AdView adView;
     private UnifiedNativeAd nativeAd;
     public static long timeLoad=0;
-    public static long TimeReload=50*1000;
 
     public static AdmobHelp getInstance() {
         if (instance == null) {
@@ -100,7 +100,7 @@ public class AdmobHelp {
         }
     }
 
-    public void showInterstitialAd(Boolean isTime,AdCloseListener adCloseListener) {
+    public void showInterstitialAd(long TimeReload,Boolean isTime,AdCloseListener adCloseListener) {
         if(isTime){
             if((timeLoad+TimeReload)<System.currentTimeMillis()){
                 if (canShowInterstitialAd()) {
