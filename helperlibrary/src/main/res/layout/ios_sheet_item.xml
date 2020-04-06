@@ -10,7 +10,7 @@
         android:layout_height="1dp"
         android:background="@color/ios_grey" />
 
-    <Button
+    <com.app.helperlibrary.control.funtion.CustomButton
         android:id="@+id/btn_item"
         android:layout_width="match_parent"
         android:layout_height="43dp"
