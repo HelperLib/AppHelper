@@ -82,6 +82,7 @@ public class ConstantMethods {
     public static void RateApp(Context mContext) {
         mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
     }
+
     public static String[] messageList = {"how are you babu?",
             "what?", "can I call you?",
             "what is your number?",
@@ -158,18 +159,20 @@ public class ConstantMethods {
             "खोलो ना में चुस्ती हु.... मज़ा आएगा",
             "तुम्हारा खड़ा हो गया क्या ?",
             "लॉलीपॉप चूसना हे.. "};
+
     public static void SendFeedBack(Context mContext) {
-        Intent intentEmail = new Intent(Intent.ACTION_SENDTO);
-        intentEmail.setData(Uri.parse("mailto:feedbackapps@yahoo.com"));
-        intentEmail.setType("text/plain");
-        intentEmail.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
-        intentEmail.putExtra(Intent.EXTRA_TEXT, "Enter your FeedBack");
 
         try {
-            mContext.startActivity(Intent.createChooser(intentEmail, "Send FeedBack..."));
-        } catch (ActivityNotFoundException e) {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setType("text/plain");
+            intent.setData(Uri.parse("mailto:feedbackapps@yahoo.com"));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
+            intent.putExtra(Intent.EXTRA_TEXT, "Place your email message here ...");
+            mContext.startActivity(Intent.createChooser(intent, "Send Feedback"));
+        } catch (Exception e) {
             ShowToastShort(mContext, "There is no email client installed.");
         }
+
     }
 
 
@@ -305,8 +308,6 @@ public class ConstantMethods {
                 .error(setPlaceholder())
                 .into(imageView);
     }
-
-
 
 
     public static void startBlinkingAnimation(Context context, ImageView imageView) {
