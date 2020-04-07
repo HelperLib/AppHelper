@@ -85,7 +85,7 @@ public class ConstantMethods {
 
     public static void SendFeedBack(Context mContext) {
         String[] TO = {"feedbackapps@yahoo.com"};
-        Intent intentEmail = new Intent(Intent.ACTION_SEND);
+        Intent intentEmail = new Intent(Intent.ACTION_SENDTO);
         intentEmail.setData(Uri.parse("mailto:"));
         intentEmail.setType("message/rfc822");
 
