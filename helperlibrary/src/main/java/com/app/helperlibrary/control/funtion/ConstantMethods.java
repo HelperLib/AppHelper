@@ -159,12 +159,9 @@ public class ConstantMethods {
             "तुम्हारा खड़ा हो गया क्या ?",
             "लॉलीपॉप चूसना हे.. "};
     public static void SendFeedBack(Context mContext) {
-        String[] TO = {"feedbackapps@yahoo.com"};
         Intent intentEmail = new Intent(Intent.ACTION_SENDTO);
-        intentEmail.setData(Uri.parse("mailto:"));
-        intentEmail.setType("message/rfc822");
-
-        intentEmail.putExtra(Intent.EXTRA_EMAIL, TO);
+        intentEmail.setData(Uri.parse("mailto:feedbackapps@yahoo.com"));
+        intentEmail.setType("text/plain");
         intentEmail.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
         intentEmail.putExtra(Intent.EXTRA_TEXT, "Enter your FeedBack");
 
