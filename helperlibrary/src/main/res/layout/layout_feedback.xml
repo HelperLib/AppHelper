@@ -38,26 +38,14 @@
 
     </LinearLayout>
 
-    <include
-        android:id="@+id/nativeAd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearToolbar"
-        android:layout_margin="5dp"
-        layout="@layout/layout_native_ad"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/nativeAd"
-        android:layout_marginBottom="20dp"
-        android:layout_above="@+id/bannerAds"
-        android:layout_centerInParent="true"
-        android:fillViewport="true">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="10dp"
+            android:layout_below="@+id/linearToolbar"
             android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
             android:layout_marginEnd="10dp"
             android:orientation="vertical">
 
@@ -102,18 +90,11 @@
                 android:background="@drawable/shape"
                 android:gravity="center"
                 android:textSize="@dimen/_15ssp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
                 android:layout_marginTop="40dp"
                 android:textColor="@color/color_white"
                 android:text="Submit"/>
         </LinearLayout>
-    </ScrollView>
 
-    <include
-        android:id="@+id/bannerAds"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/layout_banner_ad"/>
 </RelativeLayout>
