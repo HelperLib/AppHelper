@@ -83,14 +83,14 @@ public class ConstantMethods {
         mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
     }
 
-    public static void SendFeedBack(Context mContext, String mEmail, String mEmailTitle) {
-        String[] TO = {mEmail};
+    public static void SendFeedBack(Context mContext) {
+        String[] TO = {"feedbackapps@yahoo.com"};
         Intent intentEmail = new Intent(Intent.ACTION_SEND);
         intentEmail.setData(Uri.parse("mailto:"));
         intentEmail.setType("message/rfc822");
 
         intentEmail.putExtra(Intent.EXTRA_EMAIL, TO);
-        intentEmail.putExtra(Intent.EXTRA_SUBJECT, mEmailTitle);
+        intentEmail.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
         intentEmail.putExtra(Intent.EXTRA_TEXT, "Enter your FeedBack");
 
         try {
