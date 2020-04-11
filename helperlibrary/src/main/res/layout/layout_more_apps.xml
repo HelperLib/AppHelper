@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="@dimen/_90sdp"
     app:cardBackgroundColor="@color/color_white"
     app:cardCornerRadius="5.0dip"
     app:cardElevation="4.0dip"
@@ -61,8 +61,8 @@
 
             <com.app.helperlibrary.control.funtion.CustomButtonBold
                 android:id="@+id/btnDownload"
-                android:layout_width="90dp"
-                android:layout_height="32dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_28sdp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="end"
@@ -71,7 +71,7 @@
                 android:background="@drawable/customadbuttongreen"
                 android:text="Download"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/_11ssp"
                 tools:ignore="RtlHardcoded" />
 
         </LinearLayout>
