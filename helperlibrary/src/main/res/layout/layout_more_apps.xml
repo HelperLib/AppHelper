@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="110dp"
     app:cardBackgroundColor="@color/color_white"
@@ -15,8 +16,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgLogo"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
             android:layout_gravity="center"
             android:scaleType="fitXY" />
 
@@ -41,9 +42,10 @@
                 android:singleLine="true"
                 android:text="Magic"
                 android:textColor="@color/gnt_black"
-                android:textSize="15sp" />
+                android:textSize="@dimen/_14ssp"
+                tools:ignore="RtlHardcoded" />
 
-            <com.app.helperlibrary.control.shimmer.ShimmerTextView
+            <com.app.helperlibrary.control.funtion.CustomTextView
                 android:id="@+id/txtLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,10 +53,12 @@
                 android:layout_marginLeft="10dp"
                 android:ellipsize="end"
                 android:maxLines="1"
+                app:reflectionColor="#F44336"
                 android:minLines="1"
                 android:text="Free Download Now"
-                android:textColor="@color/gnt_black"
-                android:textSize="13sp" />
+                android:textColor="#212121"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="RtlHardcoded" />
 
             <com.app.helperlibrary.control.funtion.CustomButtonBold
                 android:id="@+id/btnDownload"
@@ -68,7 +72,8 @@
                 android:background="@drawable/customadbuttongreen"
                 android:text="Download"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="RtlHardcoded" />
 
         </LinearLayout>
 
@@ -80,5 +85,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_gravity="end"
-        android:src="@drawable/ad" />
+        android:src="@drawable/ad"
+        tools:ignore="RtlHardcoded" />
 </androidx.cardview.widget.CardView>
