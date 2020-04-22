@@ -2,6 +2,7 @@ package com.app.helperlibrary.control;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -295,6 +296,7 @@ public class AdmobHelp {
                 .withAdListener(new AdListener() {
                     @Override
                     public void onAdFailedToLoad(int errorCode) {
+                        Log.d("dvvvv", "onAdFailedToLoad: "+errorCode);
                         // Handle the failure by logging, altering the UI, and so on.
                         containerShimmer.stopShimmer();
                         containerShimmer.setVisibility(View.GONE);
